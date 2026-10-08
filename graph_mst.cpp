@@ -28,7 +28,6 @@ public:
     pair<int, int> key() const {
         if (directed)
             return make_pair(source, target);
-        // undirected: A-B กับ B-A ถือเป็นคู่เดียวกัน
         return make_pair(min(source, target), max(source, target));
     }
 };
